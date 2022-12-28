@@ -13,3 +13,5 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+These changes are made in the NeuroLab
