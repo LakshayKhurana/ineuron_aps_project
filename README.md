@@ -13,3 +13,5 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+
+These changes are made to the readme file in github itself
