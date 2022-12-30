@@ -7,7 +7,7 @@ from sensor.logger import logging
 
 
 if __name__ == '__main__':
-     try:
+     try:    
           training_pipeline_config = config_entity.TrainingPipelineConfig()
           data_ingestion_config = DataIngestionConfig(training_pipeline_config=training_pipeline_config)
           print(data_ingestion_config.to_dict())
