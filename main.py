@@ -8,9 +8,8 @@ from sensor.logger import logging
 
 if __name__ == '__main__':
      try:    
-          training_pipeline_config = config_entity.TrainingPipelineConfig()
+          training_pipeline_config = TrainingPipelineConfig()
           data_ingestion_config = DataIngestionConfig(training_pipeline_config=training_pipeline_config)
           print(data_ingestion_config.to_dict())
      except Exception as e:
-          print(e)
-
+          raise SensorException(e, sys)
