@@ -1,0 +1,42 @@
+[ 2023-01-03 20:24:32,077 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-01-03 20:24:32,077 ] 22 root - INFO - Exporting collection data as dataframe
+[ 2023-01-03 20:24:32,077 ] 21 root - INFO - Reading data from database: aps and collection: sensor
+[ 2023-01-03 20:24:42,497 ] 23 root - INFO - Found Columns: Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[ 2023-01-03 20:24:42,499 ] 25 root - INFO - Dropping _id column from the DataFrame
+[ 2023-01-03 20:24:45,624 ] 31 root - INFO - Save data in the feature store
+[ 2023-01-03 20:24:45,624 ] 32 root - INFO - Create feature store folder if not available
+[ 2023-01-03 20:24:51,426 ] 36 root - INFO - Data successfully saved in the feature store
+[ 2023-01-03 20:24:51,427 ] 39 root - INFO - Splitting the dataset into train & test sets
+[ 2023-01-03 20:24:54,201 ] 43 root - INFO - creating dataset folder if it does not exists
+[ 2023-01-03 20:24:59,482 ] 56 root - INFO - Data Ingestion Artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifacts/01032023__202432/data_ingestion/feature_store/sensor.csv', train_file_path='/config/workspace/artifacts/01032023__202432/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifacts/01032023__202432/data_ingestion/dataset/test.csv')
+[ 2023-01-03 20:25:01,246 ] 26 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-01-03 20:25:01,247 ] 106 root - INFO - reading base dataframe
+[ 2023-01-03 20:25:06,091 ] 109 root - INFO - replaced na values in the base dataframe
+[ 2023-01-03 20:25:07,860 ] 53 root - INFO - selecting column name which contains null values more than 0.3
+[ 2023-01-03 20:25:07,862 ] 55 root - INFO - columns to be dropped: Index(['ab_000', 'bk_000', 'bl_000', 'bm_000', 'bn_000', 'bo_000', 'bp_000',
+       'bq_000', 'br_000', 'cr_000'],
+      dtype='object')
+[ 2023-01-03 20:25:08,205 ] 111 root - INFO - dropped null values from base dataframe
+[ 2023-01-03 20:25:08,206 ] 113 root - INFO - reading train dataframe
+[ 2023-01-03 20:25:09,718 ] 115 root - INFO - reading test dataframe
+[ 2023-01-03 20:25:10,050 ] 53 root - INFO - selecting column name which contains null values more than 0.3
+[ 2023-01-03 20:25:10,051 ] 55 root - INFO - columns to be dropped: Index(['ab_000', 'bk_000', 'bl_000', 'bm_000', 'bn_000', 'bo_000', 'bp_000',
+       'bq_000', 'br_000', 'cr_000'],
+      dtype='object')
+[ 2023-01-03 20:25:10,087 ] 119 root - INFO - dropped null values from train dataframe
+[ 2023-01-03 20:25:10,097 ] 53 root - INFO - selecting column name which contains null values more than 0.3
+[ 2023-01-03 20:25:10,099 ] 55 root - INFO - columns to be dropped: Index(['ab_000', 'bk_000', 'bl_000', 'bm_000', 'bn_000', 'bo_000', 'bp_000',
+       'bq_000', 'br_000', 'cr_000'],
+      dtype='object')
+[ 2023-01-03 20:25:10,106 ] 121 root - INFO - dropped null values from test dataframe
+[ 2023-01-03 20:25:13,460 ] 128 root - INFO - checking if desired columns are present in the train dataframe
+[ 2023-01-03 20:25:13,461 ] 130 root - INFO - checking if desired columns are present in the test dataframe
+[ 2023-01-03 20:25:13,461 ] 134 root - INFO - Since all the columns are present in the train dataframe, therefore checking data drift in the train dataframe
+[ 2023-01-03 20:25:17,927 ] 138 root - INFO - Since all the columns are present in the test dataframe, therefore checking data drift in the test dataframe
+[ 2023-01-03 20:25:19,996 ] 142 root - INFO - writing report in yaml file
+[ 2023-01-03 20:25:20,135 ] 147 root - INFO - returning the data validation artifact @ DataValidationArtifact(report_file_path='/config/workspace/artifacts/01032023__202432/data_validation/validation_report.yaml')
