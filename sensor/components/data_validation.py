@@ -8,6 +8,7 @@ from scipy.stats import ks_2samp
 import pandas as pd
 import numpy as np
 from typing import Optional
+from sensor.config import TARGET_COLUMN
 
 ## We will use KS Test, to check if the distribution for a given feature is same or not
 ## Anomolies Detection
@@ -120,7 +121,7 @@ class DataValidation:
             test_df = self.drop_missing_values_columns(test_df,report_key_name='missing_values_within_test_dataset')
             logging.info(f'dropped null values from test dataframe')
 
-            exclude_columns = ['class']
+            exclude_columns = [TARGET_COLUMN]
             utils.convert_columns_to_float(df=base_df, exclude_columns=exclude_columns)
             utils.convert_columns_to_float(df=train_df, exclude_columns=exclude_columns)
             utils.convert_columns_to_float(df=test_df, exclude_columns=exclude_columns)
