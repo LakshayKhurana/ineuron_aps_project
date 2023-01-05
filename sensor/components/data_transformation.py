@@ -5,7 +5,7 @@ from sensor import utils
 from sensor.entity import config_entity,artifact_entity
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import Pipeline
+from sklearn.pipeline import Pipeline
 from imblearn.combine import SMOTETomek
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler
