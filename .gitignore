@@ -1,0 +1,5 @@
+.env
+artifacts
+logs
+saved_models
+sensor.egg-info
